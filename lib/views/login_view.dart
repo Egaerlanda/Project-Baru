@@ -1,3 +1,4 @@
+import 'package:apkega/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -82,7 +83,14 @@ class TombolLogin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: (){},
+    return ElevatedButton(
+      onPressed: (){
+      Navigator.pushReplacement(
+        context, 
+        MaterialPageRoute(builder: (bc){
+          return DashboardView();
+        }));
+    },
       style: ElevatedButton.styleFrom(
         backgroundColor: Color.fromARGB(255, 223, 103, 73),
         shape: RoundedRectangleBorder(
